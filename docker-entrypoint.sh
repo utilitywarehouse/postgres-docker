@@ -88,7 +88,7 @@ if [ "$1" = 'postgres' ]; then
 
 		{
 			echo
-			echo "host all all all $authMethod"
+			echo "host all,replication all all $authMethod"
 		} >> "$PGDATA/pg_hba.conf"
 
 		# internal start of server in order to allow set-up using psql-client
